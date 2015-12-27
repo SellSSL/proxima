@@ -1,0 +1,3283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Proxima Nova Webfonts Demo</title>
+	<link href="/fonts/stylesheet.css" rel="stylesheet">
+	<style>
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header, hgroup,
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure,
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+		/* common styles */
+		body {
+			background: #f1f1f1;
+			color: #000;
+		}
+		.page {
+			background: #fff;
+			width: 940px;
+			margin: 0 auto;
+			padding: 20px 20px 0 20px;
+			overflow: hidden;
+		}
+		.font-container {
+			overflow-x: auto;
+			overflow-y: hidden;
+			margin-bottom: 40px;
+			line-height: 1.3;
+			white-space: nowrap;
+			padding-bottom: 5px;
+		}
+		h1 {
+			position: relative;
+			background: #444;
+			font-size: 32px;
+			color: #fff;
+			padding: 10px 20px;
+			margin: 0 -20px 10px -20px;
+		}
+		.letters {
+			font-size: 25px;
+			margin-bottom: 20px;
+		}
+		.s10:before {
+			content: '10px';
+		}
+		.s11:before {
+			content: '11px';
+		}
+		.s12:before {
+			content: '12px';
+		}
+		.s14:before {
+			content: '14px';
+		}
+		.s18:before {
+			content: '18px';
+		}
+		.s24:before {
+			content: '24px';
+		}
+		.s30:before {
+			content: '30px';
+		}
+		.s36:before {
+			content: '36px';
+		}
+		.s48:before {
+			content: '48px';
+		}
+		.s60:before {
+			content: '60px';
+		}
+		.s72:before {
+			content: '72px';
+		}
+		.s10:before, .s11:before, .s12:before, .s14:before,
+		.s18:before, .s24:before, .s30:before, .s36:before,
+		.s48:before, .s60:before, .s72:before {
+			font-family: Arial, sans-serif;
+			font-size: 10px;
+			font-weight: normal;
+			font-style: normal;
+			color: #999;
+			padding-right: 6px;
+		}
+		/* fonts demo styles */
+		.demo-0 {
+			font-family: 'Proxima Nova ScOsf ExCn Th';
+			font-weight: 800;
+			font-style: normal;
+		}
+		.demo-1 {
+			font-family: 'Proxima Nova Th';
+			font-weight: 100;
+			font-style: italic;
+		}
+		.demo-2 {
+			font-family: 'Proxima Nova Cn Bl';
+			font-weight: 900;
+			font-style: italic;
+		}
+		.demo-3 {
+			font-family: 'Proxima Nova Alt ExCn Rg';
+			font-weight: normal;
+			font-style: normal;
+		}
+		.demo-4 {
+			font-family: 'Proxima Nova Alt Lt';
+			font-weight: 300;
+			font-style: italic;
+		}
+		.demo-5 {
+			font-family: 'Proxima Nova Alt Cn Lt';
+			font-weight: 600;
+			font-style: italic;
+		}
+		.demo-6 {
+			font-family: 'Proxima Nova Cn Rg';
+			font-weight: bold;
+			font-style: italic;
+		}
+		.demo-7 {
+			font-family: 'Proxima Nova ScOsf Cn Lt';
+			font-weight: 300;
+			font-style: normal;
+		}
+		.demo-8 {
+			font-family: 'Proxima Nova ScOsf ExCn Rg';
+			font-weight: normal;
+			font-style: italic;
+		}
+		.demo-9 {
+			font-family: 'Proxima Nova Alt Rg';
+			font-weight: bold;
+			font-style: normal;
+		}
+		.demo-10 {
+			font-family: 'Proxima Nova ScOsf Rg';
+			font-weight: bold;
+			font-style: normal;
+		}
+		.demo-11 {
+			font-family: 'Proxima Nova Alt Bl';
+			font-weight: 900;
+			font-style: normal;
+		}
+		.demo-12 {
+			font-family: 'Proxima Nova Alt Cn Rg';
+			font-weight: bold;
+			font-style: italic;
+		}
+		.demo-13 {
+			font-family: 'Proxima Nova Alt Cn Rg';
+			font-weight: normal;
+			font-style: italic;
+		}
+		.demo-14 {
+			font-family: 'Proxima Nova Alt ExCn Bl';
+			font-weight: 900;
+			font-style: normal;
+		}
+		.demo-15 {
+			font-family: 'Proxima Nova ScOsf Cn Rg';
+			font-weight: normal;
+			font-style: normal;
+		}
+		.demo-16 {
+			font-family: 'Proxima Nova ScOsf Cn Lt';
+			font-weight: 600;
+			font-style: normal;
+		}
+		.demo-17 {
+			font-family: 'Proxima Nova ScOsf Cn Th';
+			font-weight: 800;
+			font-style: normal;
+		}
+		.demo-18 {
+			font-family: 'Proxima Nova Alt Th';
+			font-weight: 800;
+			font-style: italic;
+		}
+		.demo-19 {
+			font-family: 'Proxima Nova Cn Lt';
+			font-weight: 600;
+			font-style: normal;
+		}
+		.demo-20 {
+			font-family: 'Proxima Nova Rg';
+			font-weight: normal;
+			font-style: normal;
+		}
+		.demo-21 {
+			font-family: 'Proxima Nova ExCn Bl';
+			font-weight: 900;
+			font-style: normal;
+		}
+		.demo-22 {
+			font-family: 'Proxima Nova Cn Rg';
+			font-weight: normal;
+			font-style: normal;
+		}
+		.demo-23 {
+			font-family: 'Proxima Nova Alt Th';
+			font-weight: 100;
+			font-style: italic;
+		}
+		.demo-24 {
+			font-family: 'Proxima Nova Alt Cn Rg';
+			font-weight: bold;
+			font-style: normal;
+		}
+		.demo-25 {
+			font-family: 'Proxima Nova ScOsf ExCn Rg';
+			font-weight: bold;
+			font-style: italic;
+		}
+		.demo-26 {
+			font-family: 'Proxima Nova ExCn Lt';
+			font-weight: 600;
+			font-style: italic;
+		}
+		.demo-27 {
+			font-family: 'Proxima Nova Alt Lt';
+			font-weight: 600;
+			font-style: normal;
+		}
+		.demo-28 {
+			font-family: 'Proxima Nova ScOsf Th';
+			font-weight: 100;
+			font-style: italic;
+		}
+		.demo-29 {
+			font-family: 'Proxima Nova Lt';
+			font-weight: 600;
+			font-style: normal;
+		}
+		.demo-30 {
+			font-family: 'Proxima Nova ScOsf Cn Th';
+			font-weight: 100;
+			font-style: italic;
+		}
+		.demo-31 {
+			font-family: 'Proxima Nova Lt';
+			font-weight: 300;
+			font-style: italic;
+		}
+		.demo-32 {
+			font-family: 'Proxima Nova ScOsf Cn Bl';
+			font-weight: 900;
+			font-style: italic;
+		}
+		.demo-33 {
+			font-family: 'Proxima Nova ExCn Th';
+			font-weight: 800;
+			font-style: normal;
+		}
+		.demo-34 {
+			font-family: 'Proxima Nova ExCn Lt';
+			font-weight: 300;
+			font-style: normal;
+		}
+		.demo-35 {
+			font-family: 'Proxima Nova ScOsf ExCn Th';
+			font-weight: 800;
+			font-style: italic;
+		}
+		.demo-36 {
+			font-family: 'Proxima Nova Alt ExCn Rg';
+			font-weight: normal;
+			font-style: italic;
+		}
+		.demo-37 {
+			font-family: 'Proxima Nova Cn Lt';
+			font-weight: 600;
+			font-style: italic;
+		}
+		.demo-38 {
+			font-family: 'Proxima Nova ScOsf Th';
+			font-weight: 800;
+			font-style: normal;
+		}
+		.demo-39 {
+			font-family: 'Proxima Nova Alt Lt';
+			font-weight: 300;
+			font-style: normal;
+		}
+		.demo-40 {
+			font-family: 'Proxima Nova Alt ExCn Bl';
+			font-weight: 900;
+			font-style: italic;
+		}
+		.demo-41 {
+			font-family: 'Proxima Nova Rg';
+			font-weight: bold;
+			font-style: italic;
+		}
+		.demo-42 {
+			font-family: 'Proxima Nova ScOsf ExCn Rg';
+			font-weight: normal;
+			font-style: normal;
+		}
+		.demo-43 {
+			font-family: 'Proxima Nova ScOsf ExCn Bl';
+			font-weight: 900;
+			font-style: italic;
+		}
+		.demo-44 {
+			font-family: 'Proxima Nova Cn Lt';
+			font-weight: 300;
+			font-style: italic;
+		}
+		.demo-45 {
+			font-family: 'Proxima Nova Alt Cn Th';
+			font-weight: 100;
+			font-style: italic;
+		}
+		.demo-46 {
+			font-family: 'Proxima Nova ScOsf Lt';
+			font-weight: 300;
+			font-style: normal;
+		}
+		.demo-47 {
+			font-family: 'Proxima Nova ExCn Lt';
+			font-weight: 600;
+			font-style: normal;
+		}
+		.demo-48 {
+			font-family: 'Proxima Nova Alt Bl';
+			font-weight: 900;
+			font-style: italic;
+		}
+		.demo-49 {
+			font-family: 'Proxima Nova ScOsf Th';
+			font-weight: 800;
+			font-style: italic;
+		}
+		.demo-50 {
+			font-family: 'Proxima Nova ScOsf ExCn Lt';
+			font-weight: 600;
+			font-style: normal;
+		}
+		.demo-51 {
+			font-family: 'Proxima Nova ScOsf Cn Lt';
+			font-weight: 300;
+			font-style: italic;
+		}
+		.demo-52 {
+			font-family: 'Proxima Nova ScOsf Lt';
+			font-weight: 600;
+			font-style: italic;
+		}
+		.demo-53 {
+			font-family: 'Proxima Nova Th';
+			font-weight: 800;
+			font-style: italic;
+		}
+		.demo-54 {
+			font-family: 'Proxima Nova ExCn Rg';
+			font-weight: normal;
+			font-style: italic;
+		}
+		.demo-55 {
+			font-family: 'Proxima Nova Alt ExCn Lt';
+			font-weight: 300;
+			font-style: italic;
+		}
+		.demo-56 {
+			font-family: 'Proxima Nova Alt Rg';
+			font-weight: normal;
+			font-style: italic;
+		}
+		.demo-57 {
+			font-family: 'Proxima Nova Cn Th';
+			font-weight: 100;
+			font-style: italic;
+		}
+		.demo-58 {
+			font-family: 'Proxima Nova ExCn Th';
+			font-weight: 100;
+			font-style: normal;
+		}
+		.demo-59 {
+			font-family: 'Proxima Nova Alt ExCn Th';
+			font-weight: 100;
+			font-style: italic;
+		}
+		.demo-60 {
+			font-family: 'Proxima Nova Alt ExCn Lt';
+			font-weight: 300;
+			font-style: normal;
+		}
+		.demo-61 {
+			font-family: 'Proxima Nova Cn Lt';
+			font-weight: 300;
+			font-style: normal;
+		}
+		.demo-62 {
+			font-family: 'Proxima Nova Alt Rg';
+			font-weight: bold;
+			font-style: italic;
+		}
+		.demo-63 {
+			font-family: 'Proxima Nova ScOsf ExCn Lt';
+			font-weight: 300;
+			font-style: italic;
+		}
+		.demo-64 {
+			font-family: 'Proxima Nova Bl';
+			font-weight: 900;
+			font-style: italic;
+		}
+		.demo-65 {
+			font-family: 'Proxima Nova Lt';
+			font-weight: 300;
+			font-style: normal;
+		}
+		.demo-66 {
+			font-family: 'Proxima Nova Th';
+			font-weight: 800;
+			font-style: normal;
+		}
+		.demo-67 {
+			font-family: 'Proxima Nova Alt Cn Rg';
+			font-weight: normal;
+			font-style: normal;
+		}
+		.demo-68 {
+			font-family: 'Proxima Nova Alt Cn Th';
+			font-weight: 800;
+			font-style: italic;
+		}
+		.demo-69 {
+			font-family: 'Proxima Nova ScOsf Th';
+			font-weight: 100;
+			font-style: normal;
+		}
+		.demo-70 {
+			font-family: 'Proxima Nova Alt Lt';
+			font-weight: 600;
+			font-style: italic;
+		}
+		.demo-71 {
+			font-family: 'Proxima Nova Th';
+			font-weight: 100;
+			font-style: normal;
+		}
+		.demo-72 {
+			font-family: 'Proxima Nova ScOsf Cn Bl';
+			font-weight: 900;
+			font-style: normal;
+		}
+		.demo-73 {
+			font-family: 'Proxima Nova Rg';
+			font-weight: bold;
+			font-style: normal;
+		}
+		.demo-74 {
+			font-family: 'Proxima Nova Lt';
+			font-weight: 600;
+			font-style: italic;
+		}
+		.demo-75 {
+			font-family: 'Proxima Nova Alt Rg';
+			font-weight: normal;
+			font-style: normal;
+		}
+		.demo-76 {
+			font-family: 'Proxima Nova ExCn Rg';
+			font-weight: bold;
+			font-style: normal;
+		}
+		.demo-77 {
+			font-family: 'Proxima Nova ExCn Bl';
+			font-weight: 900;
+			font-style: italic;
+		}
+		.demo-78 {
+			font-family: 'Proxima Nova ExCn Th';
+			font-weight: 100;
+			font-style: italic;
+		}
+		.demo-79 {
+			font-family: 'Proxima Nova ExCn Lt';
+			font-weight: 300;
+			font-style: italic;
+		}
+		.demo-80 {
+			font-family: 'Proxima Nova Bl';
+			font-weight: 900;
+			font-style: normal;
+		}
+		.demo-81 {
+			font-family: 'Proxima Nova Alt Cn Th';
+			font-weight: 800;
+			font-style: normal;
+		}
+		.demo-82 {
+			font-family: 'Proxima Nova ScOsf ExCn Th';
+			font-weight: 100;
+			font-style: normal;
+		}
+		.demo-83 {
+			font-family: 'Proxima Nova ScOsf Cn Lt';
+			font-weight: 600;
+			font-style: italic;
+		}
+		.demo-84 {
+			font-family: 'Proxima Nova ScOsf ExCn Bl';
+			font-weight: 900;
+			font-style: normal;
+		}
+		.demo-85 {
+			font-family: 'Proxima Nova Cn Th';
+			font-weight: 800;
+			font-style: italic;
+		}
+		.demo-86 {
+			font-family: 'Proxima Nova ScOsf ExCn Lt';
+			font-weight: 300;
+			font-style: normal;
+		}
+		.demo-87 {
+			font-family: 'Proxima Nova Alt ExCn Th';
+			font-weight: 800;
+			font-style: normal;
+		}
+		.demo-88 {
+			font-family: 'Proxima Nova ExCn Rg';
+			font-weight: normal;
+			font-style: normal;
+		}
+		.demo-89 {
+			font-family: 'Proxima Nova Alt Th';
+			font-weight: 100;
+			font-style: normal;
+		}
+		.demo-90 {
+			font-family: 'Proxima Nova ScOsf ExCn Lt';
+			font-weight: 600;
+			font-style: italic;
+		}
+		.demo-91 {
+			font-family: 'Proxima Nova Alt ExCn Lt';
+			font-weight: 600;
+			font-style: italic;
+		}
+		.demo-92 {
+			font-family: 'Proxima Nova Alt Cn Lt';
+			font-weight: 600;
+			font-style: normal;
+		}
+		.demo-93 {
+			font-family: 'Proxima Nova ScOsf Cn Th';
+			font-weight: 100;
+			font-style: normal;
+		}
+		.demo-94 {
+			font-family: 'Proxima Nova Alt Th';
+			font-weight: 800;
+			font-style: normal;
+		}
+		.demo-95 {
+			font-family: 'Proxima Nova Alt Cn Bl';
+			font-weight: 900;
+			font-style: normal;
+		}
+		.demo-96 {
+			font-family: 'Proxima Nova ScOsf ExCn Th';
+			font-weight: 100;
+			font-style: italic;
+		}
+		.demo-97 {
+			font-family: 'Proxima Nova ScOsf Rg';
+			font-weight: normal;
+			font-style: italic;
+		}
+		.demo-98 {
+			font-family: 'Proxima Nova Cn Bl';
+			font-weight: 900;
+			font-style: normal;
+		}
+		.demo-99 {
+			font-family: 'Proxima Nova Alt Cn Th';
+			font-weight: 100;
+			font-style: normal;
+		}
+		.demo-100 {
+			font-family: 'Proxima Nova Cn Rg';
+			font-weight: normal;
+			font-style: italic;
+		}
+		.demo-101 {
+			font-family: 'Proxima Nova Alt ExCn Th';
+			font-weight: 100;
+			font-style: normal;
+		}
+		.demo-102 {
+			font-family: 'Proxima Nova Cn Th';
+			font-weight: 100;
+			font-style: normal;
+		}
+		.demo-103 {
+			font-family: 'Proxima Nova Alt Cn Lt';
+			font-weight: 300;
+			font-style: italic;
+		}
+		.demo-104 {
+			font-family: 'Proxima Nova ScOsf ExCn Rg';
+			font-weight: bold;
+			font-style: normal;
+		}
+		.demo-105 {
+			font-family: 'Proxima Nova ScOsf Bl';
+			font-weight: 900;
+			font-style: normal;
+		}
+		.demo-106 {
+			font-family: 'Proxima Nova Cn Th';
+			font-weight: 800;
+			font-style: normal;
+		}
+		.demo-107 {
+			font-family: 'Proxima Nova ScOsf Rg';
+			font-weight: normal;
+			font-style: normal;
+		}
+		.demo-108 {
+			font-family: 'Proxima Nova Rg';
+			font-weight: normal;
+			font-style: italic;
+		}
+		.demo-109 {
+			font-family: 'Proxima Nova ScOsf Cn Rg';
+			font-weight: bold;
+			font-style: normal;
+		}
+		.demo-110 {
+			font-family: 'Proxima Nova ScOsf Rg';
+			font-weight: bold;
+			font-style: italic;
+		}
+		.demo-111 {
+			font-family: 'Proxima Nova ScOsf Cn Rg';
+			font-weight: bold;
+			font-style: italic;
+		}
+		.demo-112 {
+			font-family: 'Proxima Nova ScOsf Cn Th';
+			font-weight: 800;
+			font-style: italic;
+		}
+		.demo-113 {
+			font-family: 'Proxima Nova Alt Cn Lt';
+			font-weight: 300;
+			font-style: normal;
+		}
+		.demo-114 {
+			font-family: 'Proxima Nova ScOsf Lt';
+			font-weight: 600;
+			font-style: normal;
+		}
+		.demo-115 {
+			font-family: 'Proxima Nova Alt ExCn Lt';
+			font-weight: 600;
+			font-style: normal;
+		}
+		.demo-116 {
+			font-family: 'Proxima Nova Alt Cn Bl';
+			font-weight: 900;
+			font-style: italic;
+		}
+		.demo-117 {
+			font-family: 'Proxima Nova ScOsf Cn Rg';
+			font-weight: normal;
+			font-style: italic;
+		}
+		.demo-118 {
+			font-family: 'Proxima Nova ExCn Rg';
+			font-weight: bold;
+			font-style: italic;
+		}
+		.demo-119 {
+			font-family: 'Proxima Nova ExCn Th';
+			font-weight: 800;
+			font-style: italic;
+		}
+		.demo-120 {
+			font-family: 'Proxima Nova Alt ExCn Rg';
+			font-weight: bold;
+			font-style: normal;
+		}
+		.demo-121 {
+			font-family: 'Proxima Nova ScOsf Bl';
+			font-weight: 900;
+			font-style: italic;
+		}
+		.demo-122 {
+			font-family: 'Proxima Nova Cn Rg';
+			font-weight: bold;
+			font-style: normal;
+		}
+		.demo-123 {
+			font-family: 'Proxima Nova Alt ExCn Rg';
+			font-weight: bold;
+			font-style: italic;
+		}
+		.demo-124 {
+			font-family: 'Proxima Nova Alt ExCn Th';
+			font-weight: 800;
+			font-style: italic;
+		}
+		.demo-125 {
+			font-family: 'Proxima Nova ScOsf Lt';
+			font-weight: 300;
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+<div class="page">
+	<div class="demo-0">
+		<h1>Proxima Nova ScOsf Extra Condensed Extrabold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-1">
+		<h1>Proxima Nova Thin Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-2">
+		<h1>Proxima Nova Condensed Black Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-3">
+		<h1>Proxima Nova Alt Extra Condensed Regular</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-4">
+		<h1>Proxima Nova Alt Light Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-5">
+		<h1>Proxima Nova Alt Condensed Semibold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-6">
+		<h1>Proxima Nova Condensed Bold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-7">
+		<h1>Proxima Nova ScOsf Condensed Light</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-8">
+		<h1>Proxima Nova ScOsf Extra Condensed Regular Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-9">
+		<h1>Proxima Nova Alt Bold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-10">
+		<h1>Proxima Nova ScOsf Bold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-11">
+		<h1>Proxima Nova Alt Black</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-12">
+		<h1>Proxima Nova Alt Condensed Bold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-13">
+		<h1>Proxima Nova Alt Condensed Regular Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-14">
+		<h1>Proxima Nova Alt Extra Condensed Black</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-15">
+		<h1>Proxima Nova ScOsf Condensed Regular</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-16">
+		<h1>Proxima Nova ScOsf Condensed Semibold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-17">
+		<h1>Proxima Nova ScOsf Condensed Extrabold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-18">
+		<h1>Proxima Nova Alt Extrabold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-19">
+		<h1>Proxima Nova Condensed Semibold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-20">
+		<h1>Proxima Nova Regular</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-21">
+		<h1>Proxima Nova Extra Condensed Black</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-22">
+		<h1>Proxima Nova Condensed Regular</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-23">
+		<h1>Proxima Nova Alt Thin Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-24">
+		<h1>Proxima Nova Alt Condensed Bold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-25">
+		<h1>Proxima Nova ScOsf Extra Condensed Bold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-26">
+		<h1>Proxima Nova Extra Condensed Semibold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-27">
+		<h1>Proxima Nova Alt Semibold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-28">
+		<h1>Proxima Nova ScOsf Thin Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-29">
+		<h1>Proxima Nova Semibold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-30">
+		<h1>Proxima Nova ScOsf Condensed Thin Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-31">
+		<h1>Proxima Nova Light Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-32">
+		<h1>Proxima Nova ScOsf Condensed Black Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-33">
+		<h1>Proxima Nova Extra Condensed Extrabold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-34">
+		<h1>Proxima Nova Extra Condensed Light</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-35">
+		<h1>Proxima Nova ScOsf Extra Condensed Extrabold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-36">
+		<h1>Proxima Nova Alt Extra Condensed Regular Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-37">
+		<h1>Proxima Nova Condensed Semibold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-38">
+		<h1>Proxima Nova ScOsf Extrabold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-39">
+		<h1>Proxima Nova Alt Light</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-40">
+		<h1>Proxima Nova Alt Extra Condensed Black Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-41">
+		<h1>Proxima Nova Bold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-42">
+		<h1>Proxima Nova ScOsf Extra Condensed Regular</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-43">
+		<h1>Proxima Nova ScOsf Extra Condensed Black Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-44">
+		<h1>Proxima Nova Condensed Light Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-45">
+		<h1>Proxima Nova Alt Condensed Thin Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-46">
+		<h1>Proxima Nova ScOsf Light</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-47">
+		<h1>Proxima Nova Extra Condensed Semibold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-48">
+		<h1>Proxima Nova Alt Black Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-49">
+		<h1>Proxima Nova ScOsf Extrabold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-50">
+		<h1>Proxima Nova ScOsf Extra Condensed Semibold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-51">
+		<h1>Proxima Nova ScOsf Condensed Light Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-52">
+		<h1>Proxima Nova ScOsf Semibold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-53">
+		<h1>Proxima Nova Extrabold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-54">
+		<h1>Proxima Nova Extra Condensed Regular Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-55">
+		<h1>Proxima Nova Alt Extra Condensed Light Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-56">
+		<h1>Proxima Nova Alt Regular Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-57">
+		<h1>Proxima Nova Condensed Thin Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-58">
+		<h1>Proxima Nova Extra Condensed Thin</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-59">
+		<h1>Proxima Nova Alt Extra Condensed Thin Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-60">
+		<h1>Proxima Nova Alt Extra Condensed Light</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-61">
+		<h1>Proxima Nova Condensed Light</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-62">
+		<h1>Proxima Nova Alt Bold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-63">
+		<h1>Proxima Nova ScOsf Extra Condensed Light Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-64">
+		<h1>Proxima Nova Black Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-65">
+		<h1>Proxima Nova Light</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-66">
+		<h1>Proxima Nova Extrabold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-67">
+		<h1>Proxima Nova Alt Condensed Regular</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-68">
+		<h1>Proxima Nova Alt Condensed Extrabold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-69">
+		<h1>Proxima Nova ScOsf Thin</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-70">
+		<h1>Proxima Nova Alt Semibold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-71">
+		<h1>Proxima Nova Thin</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-72">
+		<h1>Proxima Nova ScOsf Condensed Black</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-73">
+		<h1>Proxima Nova Bold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-74">
+		<h1>Proxima Nova Semibold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-75">
+		<h1>Proxima Nova Alt Regular</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-76">
+		<h1>Proxima Nova Extra Condensed Bold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-77">
+		<h1>Proxima Nova Extra Condensed Black Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-78">
+		<h1>Proxima Nova Extra Condensed Thin Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-79">
+		<h1>Proxima Nova Extra Condensed Light Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-80">
+		<h1>Proxima Nova Black</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-81">
+		<h1>Proxima Nova Alt Condensed Extrabold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-82">
+		<h1>Proxima Nova ScOsf Extra Condensed Thin</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-83">
+		<h1>Proxima Nova ScOsf Condensed Semibold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-84">
+		<h1>Proxima Nova ScOsf Extra Condensed Black</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-85">
+		<h1>Proxima Nova Condensed Extrabold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-86">
+		<h1>Proxima Nova ScOsf Extra Condensed Light</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-87">
+		<h1>Proxima Nova Alt Extra Condensed Extrabold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-88">
+		<h1>Proxima Nova Extra Condensed Regular</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-89">
+		<h1>Proxima Nova Alt Thin</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-90">
+		<h1>Proxima Nova ScOsf Extra Condensed Semibold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-91">
+		<h1>Proxima Nova Alt Extra Condensed Semibold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-92">
+		<h1>Proxima Nova Alt Condensed Semibold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-93">
+		<h1>Proxima Nova ScOsf Condensed Thin</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-94">
+		<h1>Proxima Nova Alt Extrabold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-95">
+		<h1>Proxima Nova Alt Condensed Black</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-96">
+		<h1>Proxima Nova ScOsf Extra Condensed Thin Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-97">
+		<h1>Proxima Nova ScOsf Regular Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-98">
+		<h1>Proxima Nova Condensed Black</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-99">
+		<h1>Proxima Nova Alt Condensed Thin</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-100">
+		<h1>Proxima Nova Condensed Regular Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-101">
+		<h1>Proxima Nova Alt Extra Condensed Thin</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-102">
+		<h1>Proxima Nova Condensed Thin</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-103">
+		<h1>Proxima Nova Alt Condensed Light Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-104">
+		<h1>Proxima Nova ScOsf Extra Condensed Bold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-105">
+		<h1>Proxima Nova ScOsf Black</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-106">
+		<h1>Proxima Nova Condensed Extrabold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-107">
+		<h1>Proxima Nova ScOsf Regular</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-108">
+		<h1>Proxima Nova Regular Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-109">
+		<h1>Proxima Nova ScOsf Condensed Bold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-110">
+		<h1>Proxima Nova ScOsf Bold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-111">
+		<h1>Proxima Nova ScOsf Condensed Bold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-112">
+		<h1>Proxima Nova ScOsf Condensed Extrabold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-113">
+		<h1>Proxima Nova Alt Condensed Light</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-114">
+		<h1>Proxima Nova ScOsf Semibold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-115">
+		<h1>Proxima Nova Alt Extra Condensed Semibold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-116">
+		<h1>Proxima Nova Alt Condensed Black Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-117">
+		<h1>Proxima Nova ScOsf Condensed Regular Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-118">
+		<h1>Proxima Nova Extra Condensed Bold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-119">
+		<h1>Proxima Nova Extra Condensed Extrabold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-120">
+		<h1>Proxima Nova Alt Extra Condensed Bold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-121">
+		<h1>Proxima Nova ScOsf Black Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-122">
+		<h1>Proxima Nova Condensed Bold</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-123">
+		<h1>Proxima Nova Alt Extra Condensed Bold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-124">
+		<h1>Proxima Nova Alt Extra Condensed Extrabold Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+	<div class="demo-125">
+		<h1>Proxima Nova ScOsf Light Italic</h1>
+		<div class="font-container">
+			<p class="letters">
+				abcdefghijklmnopqrstuvwxyz <br />
+				ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />				0123456789.:,;()*!?'@#<>$%&^+-=~
+			</p>
+			<p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
+			<p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
